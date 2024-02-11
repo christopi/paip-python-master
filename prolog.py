@@ -9,25 +9,6 @@ from paip import logic
 
 ## Parser and REPL
 
-# QUESTION = "?"
-# DEFN_BEGIN = "<-"
-# QUERY_BEGIN = QUESTION "-"
-# NUM = (-|+)?[0-9]+("."[0-9]+)?
-# IDENT: [a-zA-Z][a-zA-Z0-9_]*
-# WHEN = ":-"
-# LPAREN = "("
-# RPAREN = ")"
-# COMMA = ","
-
-# command: EOF | query | defn
-# query: QUERY_BEGIN relation
-# defn: DEFN_BEGIN relation (WHEN relation_list)?
-# relation_list = relation [COMMA relation]*
-# relation: IDENT LPAREN term [COMMA term]* RPAREN
-# term: relation | var | atom
-# atom: NUM | IDENT
-# var: QUESTION IDENT
-
 
 class ParseError(Exception):
     def __init__(self, err):
